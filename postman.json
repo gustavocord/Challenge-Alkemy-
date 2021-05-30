@@ -1,0 +1,1000 @@
+// 20210530200053
+// https://www.postman.com/collections/497f942ce1421adfed0a
+
+{
+    "info": {
+      "_postman_id": "42d6d181-a8e0-416f-9029-b50e0fafebb9",
+      "name": "characters",
+      "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "service characters",
+        "id": "278d96fa-742d-4dbd-b4ae-7538ddfe36a6",
+        "request": {
+          "method": "GET",
+          "header": [
+            
+          ],
+          "url": "127.0.0.1:8080/api/characters"
+        },
+        "response": [
+          {
+            "id": "02d3033c-66db-4f1e-8f7f-2aa0420eace7",
+            "name": "movies id filter",
+            "originalRequest": {
+              "method": "GET",
+              "header": [
+                
+              ],
+              "url": {
+                "raw": "127.0.0.1:8080/api/characters?movies=1",
+                "host": [
+                  "127",
+                  "0",
+                  "0",
+                  "1"
+                ],
+                "port": "8080",
+                "path": [
+                  "api",
+                  "characters"
+                ],
+                "query": [
+                  {
+                    "key": "movies",
+                    "value": "1"
+                  }
+                ]
+              }
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "header": [
+              {
+                "key": "X-Powered-By",
+                "value": "Express"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json; charset=utf-8"
+              },
+              {
+                "key": "Content-Length",
+                "value": "542"
+              },
+              {
+                "key": "ETag",
+                "value": "W/\"21e-/7m+pADm+jqctBBKkQci0siAm+g\""
+              },
+              {
+                "key": "Date",
+                "value": "Sun, 30 May 2021 22:48:55 GMT"
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "key": "Keep-Alive",
+                "value": "timeout=5"
+              }
+            ],
+            "cookie": [
+              
+            ],
+            "body": "[\n    {\n        \"image\": \"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.show.news%2Fcine%2FNetflix-le-dice-adios-a-las-peliculas-de-Shrek--20200322-0011.html&psig=AOvVaw3q17QoEU8WCzMALYnSVUtx&ust=1622500919997000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKiTtIq98vACFQAAAAAdAA\",\n        \"name\": \"shrek\",\n        \"movies\": [\n            {\n                \"id\": 1,\n                \"title\": \"shrek\",\n                \"image\": \"https://i.pinimg.com/236x/01/05/cf/0105cf9197919557cc83702f9cf82a97--dreamworks-movies-ogre.jpg\",\n                \"qualification\": 7,\n                \"createdAt\": \"2021-05-30T22:04:20.000Z\",\n                \"genreId\": 1,\n                \"characterMovie\": {\n                    \"movieId\": 1,\n                    \"characterId\": 1\n                }\n            }\n        ]\n    }\n]"
+          },
+          {
+            "id": "16864e0c-fe83-404b-9731-1c6d7feceafa",
+            "name": "detail",
+            "originalRequest": {
+              "method": "GET",
+              "header": [
+                
+              ],
+              "url": "127.0.0.1:8080/api/characters/1"
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "header": [
+              {
+                "key": "X-Powered-By",
+                "value": "Express"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json; charset=utf-8"
+              },
+              {
+                "key": "Content-Length",
+                "value": "620"
+              },
+              {
+                "key": "ETag",
+                "value": "W/\"26c-plHIZKP8DS0YWKFWcIXjZ3y6J6Q\""
+              },
+              {
+                "key": "Date",
+                "value": "Sun, 30 May 2021 22:48:22 GMT"
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "key": "Keep-Alive",
+                "value": "timeout=5"
+              }
+            ],
+            "cookie": [
+              
+            ],
+            "body": "{\n    \"id\": 1,\n    \"name\": \"shrek\",\n    \"age\": 34,\n    \"weight\": 100,\n    \"history\": \"ogro solitario bla bla\",\n    \"image\": \"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.show.news%2Fcine%2FNetflix-le-dice-adios-a-las-peliculas-de-Shrek--20200322-0011.html&psig=AOvVaw3q17QoEU8WCzMALYnSVUtx&ust=1622500919997000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKiTtIq98vACFQAAAAAdAA\",\n    \"title\": \"shrek\",\n    \"movies\": [\n        {\n            \"id\": 1,\n            \"title\": \"shrek\",\n            \"image\": \"https://i.pinimg.com/236x/01/05/cf/0105cf9197919557cc83702f9cf82a97--dreamworks-movies-ogre.jpg\",\n            \"qualification\": 7,\n            \"createdAt\": \"2021-05-30T22:04:20.000Z\",\n            \"genreId\": 1,\n            \"characterMovie\": {\n                \"movieId\": 1,\n                \"characterId\": 1\n            }\n        }\n    ]\n}"
+          },
+          {
+            "id": "6c04d0ba-2728-4aa8-8ebc-f169530aeed7",
+            "name": "list",
+            "originalRequest": {
+              "method": "GET",
+              "header": [
+                
+              ],
+              "url": "127.0.0.1:8080/api/characters"
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "header": [
+              {
+                "key": "X-Powered-By",
+                "value": "Express"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json; charset=utf-8"
+              },
+              {
+                "key": "Content-Length",
+                "value": "570"
+              },
+              {
+                "key": "ETag",
+                "value": "W/\"23a-OvVH+Pqz0keY07KTZkWBKJdzx8s\""
+              },
+              {
+                "key": "Date",
+                "value": "Sun, 30 May 2021 22:50:13 GMT"
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "key": "Keep-Alive",
+                "value": "timeout=5"
+              }
+            ],
+            "cookie": [
+              
+            ],
+            "body": "[\n    {\n        \"image\": \"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.show.news%2Fcine%2FNetflix-le-dice-adios-a-las-peliculas-de-Shrek--20200322-0011.html&psig=AOvVaw3q17QoEU8WCzMALYnSVUtx&ust=1622500919997000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKiTtIq98vACFQAAAAAdAA\",\n        \"name\": \"shrek\"\n    },\n    {\n        \"image\": \"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGBxQUExYUFBQYGBYZGx0cGhoaGRwfIB0hHBocGiQbHR0cHysiHx8oHxoZIzQjKCwwMTExGiE3PDcwOyswMS4BCwsLDw4PHRERHTIpISkwMjAzMDA5MDA5MDAwMjAwMDIuMDAwLjAyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMP/AABEIALcBEwMBIgACEQEDEQH/\",\n        \"name\": \"Katniss \"\n    }\n]"
+          }
+        ]
+      },
+      {
+        "name": "add character",
+        "id": "a76184cf-5b95-4fe2-9c3d-c490deeca939",
+        "request": {
+          "method": "POST",
+          "header": [
+            
+          ],
+          "body": {
+            "mode": "urlencoded",
+            "urlencoded": [
+              {
+                "key": "name",
+                "value": "shrek",
+                "type": "text"
+              },
+              {
+                "key": "age",
+                "value": "34",
+                "type": "text"
+              },
+              {
+                "key": "weight",
+                "value": "100",
+                "type": "text"
+              },
+              {
+                "key": "history",
+                "value": "ogro solitario bla bla",
+                "type": "text"
+              },
+              {
+                "key": "image",
+                "value": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.show.news%2Fcine%2FNetflix-le-dice-adios-a-las-peliculas-de-Shrek--20200322-0011.html&psig=AOvVaw3q17QoEU8WCzMALYnSVUtx&ust=1622500919997000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKiTtIq98vACFQAAAAAdAAAAABAD",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "value": "shrek",
+                "type": "text"
+              }
+            ]
+          },
+          "url": "127.0.0.1:8080/api/characters"
+        },
+        "response": [
+          {
+            "id": "a1a9b05a-03d1-4afd-980f-4175a3eeb4ed",
+            "name": "add character",
+            "originalRequest": {
+              "method": "POST",
+              "header": [
+                
+              ],
+              "body": {
+                "mode": "urlencoded",
+                "urlencoded": [
+                  {
+                    "key": "name",
+                    "value": "shrek",
+                    "type": "text"
+                  },
+                  {
+                    "key": "age",
+                    "value": "34",
+                    "type": "text"
+                  },
+                  {
+                    "key": "weight",
+                    "value": "100",
+                    "type": "text"
+                  },
+                  {
+                    "key": "history",
+                    "value": "ogro solitario bla bla",
+                    "type": "text"
+                  },
+                  {
+                    "key": "image",
+                    "value": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.show.news%2Fcine%2FNetflix-le-dice-adios-a-las-peliculas-de-Shrek--20200322-0011.html&psig=AOvVaw3q17QoEU8WCzMALYnSVUtx&ust=1622500919997000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKiTtIq98vACFQAAAAAdAAAAABAD",
+                    "type": "text"
+                  },
+                  {
+                    "key": "title",
+                    "value": "shrek",
+                    "type": "text"
+                  }
+                ]
+              },
+              "url": "127.0.0.1:8080/api/characters"
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "header": [
+              {
+                "key": "X-Powered-By",
+                "value": "Express"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json; charset=utf-8"
+              },
+              {
+                "key": "Content-Length",
+                "value": "372"
+              },
+              {
+                "key": "ETag",
+                "value": "W/\"174-iNP+5klNMttOkHUT/I9NIJMjDF4\""
+              },
+              {
+                "key": "Date",
+                "value": "Sun, 30 May 2021 22:44:03 GMT"
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "key": "Keep-Alive",
+                "value": "timeout=5"
+              }
+            ],
+            "cookie": [
+              
+            ],
+            "body": "{\n    \"id\": 1,\n    \"name\": \"shrek\",\n    \"age\": \"34\",\n    \"weight\": \"100\",\n    \"history\": \"ogro solitario bla bla\",\n    \"image\": \"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.show.news%2Fcine%2FNetflix-le-dice-adios-a-las-peliculas-de-Shrek--20200322-0011.html&psig=AOvVaw3q17QoEU8WCzMALYnSVUtx&ust=1622500919997000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKiTtIq98vACFQAAAAAdAAAAABAD\",\n    \"title\": \"shrek\"\n}"
+          }
+        ]
+      },
+      {
+        "name": "update",
+        "id": "082b95e7-a267-462f-bc9d-f23c0dbcd385",
+        "request": {
+          "method": "PUT",
+          "header": [
+            
+          ],
+          "body": {
+            "mode": "urlencoded",
+            "urlencoded": [
+              {
+                "key": "name",
+                "value": "Katniss",
+                "type": "text"
+              },
+              {
+                "key": "age",
+                "value": "40",
+                "type": "text"
+              },
+              {
+                "key": "weigth",
+                "value": "50",
+                "type": "text"
+              },
+              {
+                "key": "image",
+                "value": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGBxQUExYUFBQYGBYZGx0cGhoaGRwfIB0hHBocGiQbHR0cHysiHx8oHxoZIzQjKCwwMTExGiE3PDcwOyswMS4BCwsLDw4PHRERHTIpISkwMjAzMDA5MDA5MDAwMjAwMDIuMDAwLjAyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMP/AABEIALcBEwMBIgACEQEDEQH/",
+                "type": "text"
+              }
+            ]
+          },
+          "url": "127.0.0.1:8080/api/characters/1"
+        },
+        "response": [
+          {
+            "id": "772c8baa-4d9e-4032-ab51-4f78e679a078",
+            "name": "edit",
+            "originalRequest": {
+              "method": "PUT",
+              "header": [
+                
+              ],
+              "body": {
+                "mode": "urlencoded",
+                "urlencoded": [
+                  {
+                    "key": "name",
+                    "value": "Katniss",
+                    "type": "text"
+                  },
+                  {
+                    "key": "age",
+                    "value": "40",
+                    "type": "text"
+                  },
+                  {
+                    "key": "weigth",
+                    "value": "50",
+                    "type": "text"
+                  },
+                  {
+                    "key": "image",
+                    "value": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGBxQUExYUFBQYGBYZGx0cGhoaGRwfIB0hHBocGiQbHR0cHysiHx8oHxoZIzQjKCwwMTExGiE3PDcwOyswMS4BCwsLDw4PHRERHTIpISkwMjAzMDA5MDA5MDAwMjAwMDIuMDAwLjAyMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMP/AABEIALcBEwMBIgACEQEDEQH/",
+                    "type": "text"
+                  }
+                ]
+              },
+              "url": "127.0.0.1:8080/api/characters/1"
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "header": [
+              {
+                "key": "X-Powered-By",
+                "value": "Express"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json; charset=utf-8"
+              },
+              {
+                "key": "Content-Length",
+                "value": "38"
+              },
+              {
+                "key": "ETag",
+                "value": "W/\"26-8eJDJKdwt4VvsoOOCkEYS0qAECU\""
+              },
+              {
+                "key": "Date",
+                "value": "Sun, 30 May 2021 22:52:27 GMT"
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "key": "Keep-Alive",
+                "value": "timeout=5"
+              }
+            ],
+            "cookie": [
+              
+            ],
+            "body": "{\n    \"success\": \"was updated successfully\"\n}"
+          }
+        ]
+      },
+      {
+        "name": "delete",
+        "id": "46300ace-50d8-46e4-b4cb-6c967edd7d6b",
+        "request": {
+          "method": "DELETE",
+          "header": [
+            
+          ],
+          "url": "127.0.0.1:8080/api/characters/1"
+        },
+        "response": [
+          {
+            "id": "69ad0a17-7e56-447a-9b12-98c06b204809",
+            "name": "delete character",
+            "originalRequest": {
+              "method": "DELETE",
+              "header": [
+                
+              ],
+              "url": "127.0.0.1:8080/api/characters/1"
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "header": [
+              {
+                "key": "X-Powered-By",
+                "value": "Express"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json; charset=utf-8"
+              },
+              {
+                "key": "Content-Length",
+                "value": "30"
+              },
+              {
+                "key": "ETag",
+                "value": "W/\"1e-N90CANEjX6Vq0GgOnXufoTYt4OY\""
+              },
+              {
+                "key": "Date",
+                "value": "Sun, 30 May 2021 22:53:22 GMT"
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "key": "Keep-Alive",
+                "value": "timeout=5"
+              }
+            ],
+            "cookie": [
+              
+            ],
+            "body": "{\n    \"success\": \"has been removed\"\n}"
+          }
+        ]
+      }
+    ]
+  }
+
+
+
+
+  // 20210530200305
+// https://www.postman.com/collections/62b17e7b8b88c888e3b5
+
+{
+    "info": {
+      "_postman_id": "8b0dcda3-9daa-410e-ab41-2b1ed5f67307",
+      "name": "movies",
+      "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "service movie",
+        "id": "b90459f8-8514-44e6-bbbb-2bdcb63041f7",
+        "request": {
+          "method": "POST",
+          "header": [
+            
+          ],
+          "body": {
+            "mode": "urlencoded",
+            "urlencoded": [
+              {
+                "key": "title",
+                "value": "shrek",
+                "type": "text"
+              },
+              {
+                "key": "image",
+                "value": "https://i.pinimg.com/236x/01/05/cf/0105cf9197919557cc83702f9cf82a97--dreamworks-movies-ogre.jpg",
+                "type": "text"
+              },
+              {
+                "key": "qualification",
+                "value": "10",
+                "type": "text"
+              },
+              {
+                "key": "genre",
+                "value": "comedy",
+                "type": "text"
+              }
+            ]
+          },
+          "url": "127.0.0.1:8080/api/movies"
+        },
+        "response": [
+          {
+            "id": "a71dbf12-7872-4b51-89a7-49fa19de5a35",
+            "name": "add movie",
+            "originalRequest": {
+              "method": "POST",
+              "header": [
+                
+              ],
+              "body": {
+                "mode": "urlencoded",
+                "urlencoded": [
+                  {
+                    "key": "title",
+                    "value": "shrek",
+                    "type": "text"
+                  },
+                  {
+                    "key": "image",
+                    "value": "https://i.pinimg.com/236x/01/05/cf/0105cf9197919557cc83702f9cf82a97--dreamworks-movies-ogre.jpg",
+                    "type": "text"
+                  },
+                  {
+                    "key": "qualification",
+                    "value": "10",
+                    "type": "text"
+                  },
+                  {
+                    "key": "genre",
+                    "value": "comedy",
+                    "type": "text"
+                  }
+                ]
+              },
+              "url": "127.0.0.1:8080/api/movies"
+            },
+            "status": "Created",
+            "code": 201,
+            "_postman_previewlanguage": "json",
+            "header": [
+              {
+                "key": "X-Powered-By",
+                "value": "Express"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json; charset=utf-8"
+              },
+              {
+                "key": "Content-Length",
+                "value": "202"
+              },
+              {
+                "key": "ETag",
+                "value": "W/\"ca-DxxJzxiU2tHH5zKkgGyQh2Y4XPY\""
+              },
+              {
+                "key": "Date",
+                "value": "Sun, 30 May 2021 22:04:20 GMT"
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "key": "Keep-Alive",
+                "value": "timeout=5"
+              }
+            ],
+            "cookie": [
+              
+            ],
+            "body": "{\n    \"id\": 1,\n    \"title\": \"shrek\",\n    \"image\": \"https://i.pinimg.com/236x/01/05/cf/0105cf9197919557cc83702f9cf82a97--dreamworks-movies-ogre.jpg\",\n    \"qualification\": \"10\",\n    \"genreId\": 1,\n    \"createdAt\": \"2021-05-30T22:04:20.391Z\"\n}"
+          }
+        ]
+      },
+      {
+        "name": "service movie",
+        "id": "1432d9ed-7b23-479f-982f-6026edf3a903",
+        "request": {
+          "method": "GET",
+          "header": [
+            
+          ],
+          "url": null
+        },
+        "response": [
+          {
+            "id": "60387f09-1707-493e-a6ca-6a0ea782def6",
+            "name": "deatail",
+            "originalRequest": {
+              "method": "GET",
+              "header": [
+                
+              ],
+              "url": "127.0.0.1:8080/api/movies/2"
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "header": [
+              {
+                "key": "X-Powered-By",
+                "value": "Express"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json; charset=utf-8"
+              },
+              {
+                "key": "Content-Length",
+                "value": "380"
+              },
+              {
+                "key": "ETag",
+                "value": "W/\"17c-RXJ4IflkLkiwZaps8fVVYNqR/h8\""
+              },
+              {
+                "key": "Date",
+                "value": "Sun, 30 May 2021 22:32:55 GMT"
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "key": "Keep-Alive",
+                "value": "timeout=5"
+              }
+            ],
+            "cookie": [
+              
+            ],
+            "body": "{\n    \"id\": 2,\n    \"title\": \"madagascar\",\n    \"image\": \"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGBxQUExYUFBQWFhYWFhgZFhkZGBkWHRgYGBkcIRwgFxgfICoiHCAnHRwYIzQjJysuMTExGSE2OzYwOiowMS4BCwsLDw4PHRERHTInIigxMjowMDAwMDIuMDA1MDAyLjgwMDAyMDAwODAwMDA4MjAwMDAwMDAwMDAwMDAwMDAwMP/AABEIAKQBNAMBIgACEQEDEQH/\",\n    \"qualification\": 8,\n    \"createdAt\": \"2021-05-30T22:06:00.000Z\",\n    \"genreId\": 2,\n    \"characters\": []\n}"
+          },
+          {
+            "id": "a55b888f-3a9f-41bb-a7c2-1f694523d690",
+            "name": "list",
+            "originalRequest": {
+              "method": "GET",
+              "header": [
+                
+              ],
+              "url": "127.0.0.1:8080/api/movies/"
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "header": [
+              {
+                "key": "X-Powered-By",
+                "value": "Express"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json; charset=utf-8"
+              },
+              {
+                "key": "Content-Length",
+                "value": "1315"
+              },
+              {
+                "key": "ETag",
+                "value": "W/\"523-7c1AIWzhUqk8Wc+2KlsYyEMQwpo\""
+              },
+              {
+                "key": "Date",
+                "value": "Sun, 30 May 2021 22:24:55 GMT"
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "key": "Keep-Alive",
+                "value": "timeout=5"
+              }
+            ],
+            "cookie": [
+              
+            ],
+            "body": "[\n    {\n        \"image\": \"https://i.pinimg.com/236x/01/05/cf/0105cf9197919557cc83702f9cf82a97--dreamworks-movies-ogre.jpg\",\n        \"title\": \"shrek\",\n        \"createdAt\": \"2021-05-30T22:04:20.000Z\"\n    },\n    {\n        \"image\": \"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGBxQUExYUFBQWFhYWFhgZFhkZGBkWHRgYGBkcIRwgFxgfICoiHCAnHRwYIzQjJysuMTExGSE2OzYwOiowMS4BCwsLDw4PHRERHTInIigxMjowMDAwMDIuMDA1MDAyLjgwMDAyMDAwODAwMDA4MjAwMDAwMDAwMDAwMDAwMDAwMP/AABEIAKQBNAMBIgACEQEDEQH/\",\n        \"title\": \"madagascar\",\n        \"createdAt\": \"2021-05-30T22:06:00.000Z\"\n    },\n    {\n        \"image\": \"https://es.web.img2.acsta.net/pictures/210/455/21045552_20131001101323189.jpg\",\n        \"title\": \"los juegos del hambre\",\n        \"createdAt\": \"2021-05-30T22:06:49.000Z\"\n    },\n    {\n        \"image\": \"https://www.latercera.com/resizer/NZXRXCNWEY0Gh1Bb9pWqoAVM9UA=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/WMGLI2LX5VCCBL3JVFMIPG2QQY.jpg\",\n        \"title\": \"IT\",\n        \"createdAt\": \"2021-05-30T22:07:22.000Z\"\n    },\n    {\n        \"image\": \"https://cl.buscafs.com/www.tomatazos.com/public/uploads/images/28188/28188_800x1153.jpg\",\n        \"title\": \"rec\",\n        \"createdAt\": \"2021-05-30T22:07:51.000Z\"\n    },\n    {\n        \"image\": \"https://i.ytimg.com/vi/MdIDq6o4i-Y/movieposter_en.jpg\",\n        \"title\": \"frozen\",\n        \"createdAt\": \"2021-05-30T22:08:55.000Z\"\n    },\n    {\n        \"image\": \"https://lumiere-a.akamaihd.net/v1/images/p_coco_19736_fd5fa537.jpeg?region=0%2C0%2C540%2C810\",\n        \"title\": \"coco\",\n        \"createdAt\": \"2021-05-30T22:09:30.000Z\"\n    }\n]"
+          },
+          {
+            "id": "d49c677f-ce90-4df8-b88c-7491c2838223",
+            "name": "filter idgenre",
+            "originalRequest": {
+              "method": "GET",
+              "header": [
+                
+              ],
+              "url": {
+                "raw": "127.0.0.1:8080/api/movies?genre=2",
+                "host": [
+                  "127",
+                  "0",
+                  "0",
+                  "1"
+                ],
+                "port": "8080",
+                "path": [
+                  "api",
+                  "movies"
+                ],
+                "query": [
+                  {
+                    "key": "genre",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "header": [
+              {
+                "key": "X-Powered-By",
+                "value": "Express"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json; charset=utf-8"
+              },
+              {
+                "key": "Content-Length",
+                "value": "610"
+              },
+              {
+                "key": "ETag",
+                "value": "W/\"262-nBECtccKqHFDcCj8/PUU6mnk97M\""
+              },
+              {
+                "key": "Date",
+                "value": "Sun, 30 May 2021 22:30:53 GMT"
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "key": "Keep-Alive",
+                "value": "timeout=5"
+              }
+            ],
+            "cookie": [
+              
+            ],
+            "body": "[\n    {\n        \"image\": \"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGBxQUExYUFBQWFhYWFhgZFhkZGBkWHRgYGBkcIRwgFxgfICoiHCAnHRwYIzQjJysuMTExGSE2OzYwOiowMS4BCwsLDw4PHRERHTInIigxMjowMDAwMDIuMDA1MDAyLjgwMDAyMDAwODAwMDA4MjAwMDAwMDAwMDAwMDAwMDAwMP/AABEIAKQBNAMBIgACEQEDEQH/\",\n        \"title\": \"madagascar\",\n        \"createdAt\": \"2021-05-30T22:06:00.000Z\"\n    },\n    {\n        \"image\": \"https://i.ytimg.com/vi/MdIDq6o4i-Y/movieposter_en.jpg\",\n        \"title\": \"frozen\",\n        \"createdAt\": \"2021-05-30T22:08:55.000Z\"\n    },\n    {\n        \"image\": \"https://lumiere-a.akamaihd.net/v1/images/p_coco_19736_fd5fa537.jpeg?region=0%2C0%2C540%2C810\",\n        \"title\": \"coco\",\n        \"createdAt\": \"2021-05-30T22:09:30.000Z\"\n    }\n]"
+          }
+        ]
+      },
+      {
+        "name": "edit",
+        "id": "6994bafe-41c2-4b0d-b578-a316ad9318ca",
+        "request": {
+          "method": "PUT",
+          "header": [
+            
+          ],
+          "url": null
+        },
+        "response": [
+          
+        ]
+      },
+      {
+        "name": "delete",
+        "id": "c57e4023-b71d-4f7a-b9a9-ac07a89322a1",
+        "request": {
+          "method": "DELETE",
+          "header": [
+            
+          ],
+          "url": "127.0.0.1:8080/api/movies/2"
+        },
+        "response": [
+          
+        ]
+      }
+    ]
+  }
+
+
+  // 20210530200337
+// https://www.postman.com/collections/3f866821af652afe39b5
+
+{
+    "info": {
+      "_postman_id": "eb74e342-e8a7-42ac-87fd-9887a8c88747",
+      "name": "user",
+      "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "register user",
+        "id": "134efbfb-0801-4464-a38f-5b572d1718d0",
+        "request": {
+          "method": "POST",
+          "header": [
+            
+          ],
+          "body": {
+            "mode": "urlencoded",
+            "urlencoded": [
+              {
+                "key": "name",
+                "value": "gustavo",
+                "type": "text"
+              },
+              {
+                "key": "password",
+                "value": "hola1234",
+                "type": "text"
+              },
+              {
+                "key": "email",
+                "value": "yoseron954@sc2hub.com",
+                "type": "text"
+              }
+            ]
+          },
+          "url": "127.0.0.1:8080/api/auth/register"
+        },
+        "response": [
+          {
+            "id": "7f0029ea-7932-477c-ae8f-482d550f436a",
+            "name": "register user",
+            "originalRequest": {
+              "method": "POST",
+              "header": [
+                
+              ],
+              "body": {
+                "mode": "urlencoded",
+                "urlencoded": [
+                  {
+                    "key": "name",
+                    "value": "gustavo",
+                    "type": "text"
+                  },
+                  {
+                    "key": "password",
+                    "value": "hola1234",
+                    "type": "text"
+                  },
+                  {
+                    "key": "email",
+                    "value": "yoseron954@sc2hub.com",
+                    "type": "text"
+                  }
+                ]
+              },
+              "url": "127.0.0.1:8080/api/auth/register"
+            },
+            "status": "Created",
+            "code": 201,
+            "_postman_previewlanguage": "json",
+            "header": [
+              {
+                "key": "X-Powered-By",
+                "value": "Express"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json; charset=utf-8"
+              },
+              {
+                "key": "Content-Length",
+                "value": "16"
+              },
+              {
+                "key": "ETag",
+                "value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+              },
+              {
+                "key": "Date",
+                "value": "Sun, 30 May 2021 22:58:03 GMT"
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "key": "Keep-Alive",
+                "value": "timeout=5"
+              }
+            ],
+            "cookie": [
+              
+            ],
+            "body": "{\n    \"success\": true\n}"
+          },
+          {
+            "id": "cbb709b1-08d1-4b19-a354-d69f98d410ef",
+            "name": "login user",
+            "originalRequest": {
+              "method": "POST",
+              "header": [
+                
+              ],
+              "body": {
+                "mode": "urlencoded",
+                "urlencoded": [
+                  {
+                    "key": "password",
+                    "value": "hola1234",
+                    "type": "text"
+                  },
+                  {
+                    "key": "email",
+                    "value": "yoseron954@sc2hub.com",
+                    "type": "text"
+                  }
+                ]
+              },
+              "url": "127.0.0.1:8080/api/auth/login"
+            },
+            "status": "OK",
+            "code": 200,
+            "_postman_previewlanguage": "json",
+            "header": [
+              {
+                "key": "X-Powered-By",
+                "value": "Express"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json; charset=utf-8"
+              },
+              {
+                "key": "Content-Length",
+                "value": "268"
+              },
+              {
+                "key": "ETag",
+                "value": "W/\"10c-AjaaJL5JQb200CXIoYVbG6krqvY\""
+              },
+              {
+                "key": "Date",
+                "value": "Sun, 30 May 2021 22:58:26 GMT"
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "key": "Keep-Alive",
+                "value": "timeout=5"
+              }
+            ],
+            "cookie": [
+              
+            ],
+            "body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoxLCJpYXQiOjE2MjI0MTU1MDZ9.tAsZEIS72kHkeqcG7ijONPm1-n7dAWcGFWE0igPEAhU\",\n    \"user\": {\n        \"id\": 1,\n        \"email\": \"yoseron954@sc2hub.com\",\n        \"name\": \"gustavo\",\n        \"password\": \"$2a$10$aqOVjcraou7oxgQsTAxh1ex3RMLP4n.1USqxWM9GTlhENPsxXz5Jy\"\n    }\n}"
+          }
+        ]
+      }
+    ]
+  }
