@@ -42,7 +42,9 @@ const list = async (req, res) => {
                         res.send('the filter did not return a result');
                     }
                     else {
-                        res.json(movie);
+                        res
+                        .status(200)
+                        .json(movie)
                     }
                 });
             } else {
@@ -51,12 +53,15 @@ const list = async (req, res) => {
                     attributes: ["image", "title", "createdAt"]
                 })
                     .then(movie => {
-                        res.json(movie);
+                        res.status(201).json(movie);
                     })
             }
 
         } catch (err) {
-            console.log(err);
+            return res.status(500).json({
+                error : error,
+                msg : "Internal server error",
+            })
         }
     }
     else {
@@ -87,12 +92,15 @@ const detail = async (req, res) => {
             res.json({ ERROR: 'there is no movie associated with the indicated id' })
         }
         else {
-            res.json(movie)
-        }
+            res
+            .status(200)
+            .json(movie)        }
 
 
     } catch (error) {
         console.log(error)
+        res.status(500).json({ error: error, message: "Internal server error" });
+
     }
 
 }
@@ -107,6 +115,7 @@ const create = async (req, res) => {
 
 
     if (validate.result) {
+        try {
 
         const exist = await Movie.findOne({ where: { title: title } })
 
@@ -146,6 +155,15 @@ const create = async (req, res) => {
             res.status(201).json(movie);
         }
     }
+        catch (error) {
+            return res.status(500).json({
+                error : error,
+                msg : "Internal server error",
+            })
+        
+    }
+}
+    
 
     else { res.send(validate.error) }
 
@@ -162,7 +180,7 @@ const deleted = async (req, res) => {
         })
 
         if (movie != 0) {
-            res.json({ success: 'has been removed' })
+            res.status(200).json({  success:  'has been removed'});
         }
         else {
             res.json({ ERROR: 'the movie you are trying to deleted does not exist' })
@@ -170,6 +188,8 @@ const deleted = async (req, res) => {
 
     } catch (error) {
         console.log(error)
+        res.status(500).json({ error: error, message: "Internal server error" });
+
     }
 
 }
@@ -188,7 +208,7 @@ const update = async (req, res) => {
 
 
         if (movie != 0) {
-            res.json({ success: 'movie update' })
+            res.status(200).json({  success:  'has been update'});
         }
         else {
             res.json({ ERROR: 'the movie you are trying to update does not exist' })
@@ -196,6 +216,8 @@ const update = async (req, res) => {
 
 
     } catch (error) {
+        res.status(500).json({ error: error, message: "Internal server error" });
+
 
     }
 }

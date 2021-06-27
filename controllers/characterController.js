@@ -45,8 +45,9 @@ const list = async (req, res) => {
                         res.send('the filter did not return a result');
                     }
                     else {
-                        res.json(character);
-                    }
+                        res
+                        .status(200) 
+                        .json(character);                    }
                 });
             } else {
                 await Character.findAll({
@@ -54,8 +55,9 @@ const list = async (req, res) => {
                     attributes: ["image", "name",]
                 })
                     .then(character => {
-                        res.json(character);
-                    })
+                        res
+                        .status(200) 
+                        .json(character);                    })
             }
         }
         else {
@@ -65,6 +67,8 @@ const list = async (req, res) => {
 
     } catch (err) {
         console.log(err);
+        res.status(500)
+        .json({error: err , msj : "Internal server error"})
     }
 
 }
@@ -87,8 +91,9 @@ const detail = async (req, res) => {
         });
 
         if (charac) {
-            res.json(charac)
-        }
+            res
+            .status(200) 
+            .json(charac);        }
 
         else {
             res.json({ msj: "character not exists" })
@@ -96,6 +101,8 @@ const detail = async (req, res) => {
 
     } catch (error) {
         console.log(error)
+        res.status(500)
+        .json({error: error , msj : "Internal server error"})
     }
 }
 
@@ -125,13 +132,18 @@ const create = async (req, res) => {
                     movieId: movie.id,
                     characterId: character.id,
                 });
-                res.json(character);
-            }
+                res
+                .status(200)
+                .json(character);            }
             else { res.json({ msg: 'the movie does not exist or already has the title entered' }); }
 
         }
         catch (error) {
             console.error(error);
+            return res.status(500).json({
+                error : error,
+                msg : "Internal server error",
+            })
         }
     }
     else {
@@ -161,6 +173,10 @@ const deleted = async (req, res) => {
 
     } catch (error) {
         console.log(error)
+        return res.status(500).json({
+            error : error,
+            msg : "Internal server error",
+        })
 
     }
 }
@@ -188,6 +204,8 @@ const update = async (req, res) => {
     } catch (error) {
 
         console.log(error)
+        res.status(500).json({ error: error, message: "Internal server error" });
+
 
     }
 }

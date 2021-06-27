@@ -73,8 +73,10 @@ const register= async (req, res) => {
 
 
         catch (error) {
-            console.error(error);
-        }
+            return  res.status(500).json({
+                error : error,
+                msg : "Internal server error",
+            })        }
     }
     else {
         res.send(val.error)
@@ -109,7 +111,9 @@ const login= async (req, res) => {
             else {
                 const createToken = jwt.sign({ user: user.id }, process.env.SECRET, (err, token) => {
                     expiresIn: 1000 * 60 * 60 * 24 * 7,
-                        res.json({ token, user });
+                    res
+                    .status(200)
+                    .json({ token, user });
                 })
 
             }
@@ -119,6 +123,9 @@ const login= async (req, res) => {
 
     } catch (error) {
 
+        res.status(500).json({
+            error : error,
+            msg : "Internal server error"})
     }
 
 }
